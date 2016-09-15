@@ -1,0 +1,10 @@
+<div>
+<%= image_tag(@pokemon["sprites"]["front_default"]) %></br>
+<%= @pokemon["name"].capitalize %></br>
+Weight: <%= @pokemon["weight"] %></br>
+</div>
+
+</div>
+<%= link_to_if(@pokemon["id"] > 1, "Previous", pokemon_path(@pokemon["id"] - 1)) %>
+<%= link_to_if(@pokemon["id"] < 721, "Next", pokemon_path(@pokemon["id"] + 1)) %>
+</div>

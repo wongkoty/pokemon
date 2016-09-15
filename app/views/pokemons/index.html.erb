@@ -1,5 +1,6 @@
 <div class="pokemon-container">
 <% @pokemons.each do |pokemon| %>
-	<div class="pokemon"> <%= pokemon["name"] %> </div>
+	<div class="pokemon"> <%= link_to(pokemon["name"].capitalize, pokemon_path(pokemon["name"])) %>
+		</div>
 <% end %>
 </div>
